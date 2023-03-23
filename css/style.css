@@ -130,7 +130,8 @@ p {
       line-height: 1.7em;
   }/*home info*/
   #home-info {
-      height: 400px;
+      min-height: 400px;
+      display: flex;
   }
   #home-info .info-img {
       float:left;
@@ -149,7 +150,7 @@ p {
   #home-info .info-content p {
       padding-bottom: 30px;
   }
-  /* features */
+  /* # */
   .box {
       float:left;
       width:33.3%;
@@ -170,7 +171,8 @@ p {
         #about-info .info-right img {
             display: block;
             margin: auto;
-            width: 70%;
+            width: 35vh;
+            height: 35vh;
             border-radius: 50%;
         }
 
@@ -182,7 +184,7 @@ p {
         }
         /* testimonials */
         #testimonials {
-            height: 600px;
+           min-height: 600px;
             background: url('../img/test-bg.jpg') no-repeat center center/cover;
             padding-top: 100px;
         }
@@ -230,7 +232,7 @@ p {
             border-color: #f7c08a;
         }
         /* box */
-        .fas fa-phone {
+        .fas .fa-phone {
             width: 50px;
         }
         /*footer*/
@@ -240,5 +242,51 @@ p {
           color: white;
           padding: 20px;
       }
-
+/* 
+#############   Responsiveness
+*/
   
+
+@media(max-width: 600px){
+    #features{
+        display: flex;
+        flex-direction: column;
+    }
+    #features .box{
+        width: 100%;
+    }
+
+    #home-info{
+        display: flex;
+        flex-direction: column;
+    }
+    #home-info .info-content{
+        width: 100%;
+    }
+    #about-info .container{
+        justify-content: center;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #about-info .container div{
+        padding: 20px 0;
+    }
+    #about-info .container h1{
+        text-align: center;
+        text-transform: capitalize;
+    }
+    #about-info .info-right ,
+    #about-info .info-left {
+        width: 100%;
+    }
+
+    #contact-info .container{
+        display: flex;
+        flex-direction: column;
+    }
+    #contact-info .container .box{
+    width: 100%;
+    padding: 5px 0;
+    }
+
+}
